@@ -1,0 +1,727 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: top 0.3s;
+    z-index: 100;
+}
+
+.hidden-nav {
+    top: -90px;
+  }
+
+.navbar .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    color: #474747;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background: linear-gradient(0deg, rgb(221, 229, 239) 0%, rgb(238, 242, 249) 65%);
+    text-transform: uppercase;
+    padding-left: 64px;
+    padding-right: 32px;
+    opacity: 1;
+}
+
+.navbar-container .navbar-logo,
+.navbar-container .navbar-content {
+    position: relative;
+    height: 100%;
+    padding-top: 24px;
+}
+
+.navbar-container .navbar-content svg {
+    position: relative;
+    top: 6px;
+}
+
+.navbar-logo .navbar-logo-content {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo .navbar-logo-content p {
+    padding: 0 0 0 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.navbar-content a {
+    color: #474747;
+    margin: 0px 12px;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 4px;
+    align-items: center;
+}
+
+/* End Navbar */
+
+.hero-container {
+    display: flex;
+    position: relative;
+    /* max-width: 1471px; */
+    width: 100%;
+    max-height: 830px;
+    height: 100%;
+    padding: 0 0 220px 0;
+    margin-top: 90px;
+    /* background-color: #EEEEEE; */
+    background: linear-gradient(to right, #EEEEEE, #DEDEDE);
+    overflow: hidden;
+    z-index: 0;
+}
+  
+.carousel {
+    flex: 1; /* Bagian ini akan mengambil sebagian besar lebar sesuai proporsi */
+    /* background-color: aquamarine; */
+    /* transform: translateX(0px); */
+}
+
+.hero-content {
+    flex: 1;
+    position: relative;
+    right: 0;
+}
+
+.hero-container .carousel .carousel-item div img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 100px;
+}
+
+.hero-container .carousel .carousel-item .item-carousel-1 img {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-container .carousel .carousel-item .item-carousel-2 img {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: calc(50px - 125px);
+    left: 180px;
+}
+
+.hero-container .carousel .carousel-item .item-carousel-3 img {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: calc(50px + 125px);
+    left: calc(180px + 250px);
+}
+
+.hero-container .carousel .carousel-item .item-carousel-4 img {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: calc(50px + 375px);
+    left: 180px;
+}
+
+.hero-container .carousel .carousel-item .item-carousel-5 img {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: calc(50px + 125px);
+    left: calc(180px - 250px);
+}
+
+.hero-content {
+    flex: 1; /* Bagian ini juga akan mengambil sebagian besar lebar sesuai proporsi */
+    padding: 20px; /* Atur padding sesuai kebutuhan Anda */
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    justify-content: flex-end;
+    /* background-color: blueviolet; */
+}
+
+.hero-content .head {
+    font-size: 80px;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #004AE1;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.5px;
+}
+  
+.hero-content .text-hero {
+    font-size: 14px;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #474747;
+}
+
+.hero-content .svg {
+    position: relative;
+    /* background-color: #474747; */
+    justify-content: flex-start;
+    align-items: end;
+}
+
+.hero-content .pencarian {
+    position: relative;
+    display: inline;
+    padding: 25px 1px;
+    justify-content: center;
+    /* background-color: aqua; */
+}
+
+.hero-content .pencarian svg {
+    position: relative;
+    width: 20px;
+    fill: #FDD300;
+    top: 3px;
+    left: 165px;
+}
+
+.hero-content input[type='text'] {
+    width: 410px;
+    height: 55px;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #004AE1;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+}
+
+.hero-content input[type="text"]::placeholder {
+    color: white;
+    text-align: center;
+    left: 100px;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.hero-container::before {
+    content: "";
+    position: absolute;
+    height: 800px;
+    width: 900px;
+    border-radius: 50%;
+    left: -500px;
+    top: 30px;
+    background-color: #004AE1;
+}
+
+.hero-container::after {
+    content: "";
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    border-radius: 50%;
+    right: -180px;
+    top: -550px;
+    background-color: white;
+    border: 220px solid #004AE1;
+    z-index: -1;
+}
+
+/* End of Hero Section */
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 405px;
+    margin: 0;
+    /* background-color: aqua; */
+}
+
+.info-container {
+    display: flex;
+    gap: 35px;
+}
+
+.info .info-container .info-text {
+    height: 405px;
+    width: 370px;
+    background-color: #004AE1; /* Sesuaikan dengan warna latar belakang yang diinginkan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info .info-container .info-text p {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.info .info-container .info-text span {
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.info-text, .info-carousel {
+    /* flex: 1; */
+    height: 405px;
+    padding: 20px; /* Sesuaikan dengan kebutuhan Anda */
+}
+
+.info .info-container .info-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    /* background-color: aquamarine; */
+}
+
+.info .info-container .info-carousel .info-carousel-items {
+    display: flex;
+    gap: 20px;
+}
+
+.info .info-container .info-carousel .info-carousel-items .item {
+    /* background-color: #ddd; */
+    width: 350px;
+    height: 310px;
+    border: 1px solid #004AE1;
+    border-radius: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info .info-container .info-carousel .info-carousel-items .item a img {
+    width: 150px;
+    display: inline-block;
+}
+
+.info .info-container .info-carousel .info-carousel-items .item a p {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 18px;
+    font-weight: 800;
+    margin: 16px 0px;
+    color: #004ae1;
+}
+
+.info .info-container .info-carousel .info-carousel-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 150px;
+}
+
+.info-carousel-button .prev-button,
+.info-carousel-button .next-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #FDD300;
+    cursor: pointer;
+}
+
+.info .info-container .info-carousel .info-carousel-button svg {
+    width: 20px;
+    fill: #004AE1;
+}
+
+.info-carousel-button .prev-button {
+    left: -375px;
+}
+
+.info-carousel-button .next-button {
+    left: 345px;
+}
+
+/* End of Info Section */
+
+.content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 20px;
+    background: linear-gradient(to top, #FFFFFF, #EEF2F9);
+}
+
+.content .content-container {
+    display: flex;
+    flex-direction: column;
+    width: 72.8%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.content .content-container .title-content {
+    margin: 33px 0;
+}
+
+.content .content-container .title-content p,
+.content .content-container .body-content .news .head .title-body p {
+    text-transform: uppercase;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 21px;
+    font-weight: 800;
+    color: #004AE1;
+}
+
+.content .content-container .body-content {
+    display: flex;
+}
+
+.content .content-container .body-content .news {
+    width: 65%;
+    height: 100%;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #e0e4ea;
+    /* opacity: 0.8; */
+}
+
+.content .content-container .body-content .news .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.content .content-container .body-content .news .head .lihat-semua {
+    display: flex;
+    gap: 5px;
+    border-radius: 20px;
+    background-color: #FDD300;
+    padding: 4.8px 16px;
+    cursor: pointer;
+}
+
+.content .content-container .body-content .news .head .lihat-semua:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content .content-container .body-content .news .head .lihat-semua svg {
+    width: 25px;
+    stroke: #004AE1;
+    stroke-width: 1;
+}
+
+.content .content-container .body-content .news .head .lihat-semua p {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 20px;
+    font-weight: 700;
+    color: #474747;
+}
+
+.content .content-container .body-content .news .news-items {
+    display: flex;
+    color: #474747;
+    flex-direction: column;
+}
+
+.content .content-container .body-content .news .news-items .item {
+    display: flex;
+    cursor: pointer;
+}
+
+.content .content-container .body-content .news .news-items .item img {
+    width: 327px;
+    border-radius: 20px;
+    margin: 15px 15px 15px 0;
+}
+
+.content .content-container .body-content .news .news-items .item p {
+    font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.content .content-container .body-content .news .news-items .item .text-item .title {
+    margin: 15px 15px 0 0;
+    line-height: 1.5;
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.content .content-container .body-content .news .news-items .item .text-item .body {
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.content .content-container .body-content .news .news-items .item .text-item .footer {
+    margin-top: 5px;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 13px;
+}
+
+.content .content-container .body-content .news .news-items .item-carousel {
+    display: flex;
+    /* background-color: aqua; */
+    /* gap: 15px; */
+    justify-content: space-between;
+    margin-top: 15px;
+    font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.content .content-container .body-content .news .news-items .item-carousel .carousel img {
+    width: 213px;
+    height: 142px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.content .content-container .body-content .news .news-items .item-carousel .carousel {
+    cursor: pointer;
+}
+
+.content .content-container .body-content .news .news-items .item-carousel .carousel p {
+    padding: 0 3px;
+}
+
+.content .content-container .body-content .news .news-items .item-carousel .carousel .title {
+    line-height: 1.5;
+    font-size: 15px;
+    margin-bottom: 4.8px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.content .content-container .body-content .news .news-items .item-carousel .carousel .footer {
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 12px;
+    margin-top: 4.8px;
+}
+
+.content .content-container .body-content .news .news-items .item-carousel .carousel-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .content-container .body-content .news .news-items .item-carousel .carousel-button svg {
+    width: 20px;
+    fill: #004AE1;
+}
+
+.content .content-container .body-content .news .news-items .item-carousel .carousel-button .prev-button,
+.content .content-container .body-content .news .news-items .item-carousel .carousel-button .next-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #FDD300;
+    cursor: pointer;
+}
+
+.content .content-container .body-content .news .news-items .item-carousel .carousel-button .prev-button {
+    left: -17px;
+}
+
+.content .content-container .body-content .news .news-items .item-carousel .carousel-button .next-button {
+    left: 622px;
+}
+
+.content .content-container .body-content .pemilu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 30px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    background-color: #004AE1;
+}
+
+.content .content-container .body-content .pemilu .body {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 5px;
+    overflow: auto;
+    background-color: white;
+}
+
+.content .content-container .body-content .pemilu .body .artikels {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #23277B;
+    /* background-color: aqua; */
+}
+
+.content .content-container .body-content .pemilu .body .artikels .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.content .content-container .body-content .pemilu .body .artikels .icon img {
+    width: 40px;
+    height: 40px;
+    transform: translate(-10px, 10px);
+}
+
+.content .content-container .body-content .pemilu .body .artikels .artikel .head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11.2px;
+    color: #23277B;
+    margin: 15px 0;
+}
+
+.content .content-container .body-content .pemilu .body .artikels .artikel .head .title {
+    font-weight: 700;
+}
+
+
+.content .content-container .body-content .pemilu .body .artikels .artikel .head .date {
+    margin-right: 10px;
+}
+
+.content .content-container .body-content .pemilu .body .artikels .artikel .body-artikel a {
+    color: #474747;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-right: 10px;
+}
+
+.content .content-container .body-content .pemilu .head img {
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 10px 10px 0 0;
+}
+
+.content .content-container .body-content .pemilu .footer img {
+    width: 100%;
+    align-items: flex-end;
+    border-radius: 0 0 10px 10px;
+}
+
+/* End of Content Section */
+
+.agenda {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0;
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 20px;
+    background: linear-gradient(to top, #FFFFFF, #EEF2F9);
+}
+
+.agenda .agenda-title,
+.agenda .agenda-contents {
+    max-width: 70vw;
+}
+
+.agenda .agenda-title {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    /* width: 200px;
+    height: 55px; */
+    padding: 15px 15px;
+    border-radius: 10px;
+    background-color: #FDD300;
+    font-size: 22px;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 900;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #474747;
+    z-index: 10;
+}
+
+.agenda .agenda-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55px;
+    background-color: #004AE1;
+    padding: 60px 25px;
+    border-radius: 20px;
+}
+
+.agenda .agenda-contents .agenda-contents-wrapper {
+    display: flex;
+}
+
+.agenda .agenda-contents .agenda-contents-wrapper .contents-container {
+    display: flex;
+}
+
+.agenda .agenda-contents .agenda-contents-wrapper .contents-container img {
+    width: 240px;
+    height: 160px;
+    border-radius: 20px;
+}
+
+.agenda .agenda-contents .agenda-contents-wrapper .contents-container .contents-item .title,
+.agenda .agenda-contents .agenda-contents-wrapper .contents-container .contents-item .date
+ {
+    font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.5;
+    font-size: 15px;
+    margin-bottom: 4.8px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 10px;
+    color: white;
+}
+
+.agenda .agenda-contents .agenda-contents-wrapper .contents-container .contents-item .date {
+    font-weight: 400;
+    font-size: 10px;
+}
